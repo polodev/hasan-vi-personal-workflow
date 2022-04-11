@@ -1,5 +1,4 @@
 @import "variable.scss";
-body {
-  background-color: $primary_color;
-  color: $paragraph_white;
-}
+@import "typography.scss";
+@import "default.scss";
+@import "footer.scss";

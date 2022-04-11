@@ -1,0 +1,36 @@
+/*-------------------------
+  Footer Style
+-------------------------*/
+
+.footer-area {
+    background-color: #ebecef;
+    .footer-top {
+        padding: 100px 0;
+    }
+}
+
+.footer-widget {
+    .quick-link {
+        list-style: none;
+        padding: 0;
+        li {
+            a {
+                color: $dark_color;
+                &:hover {
+                    color: $primary_color;
+                }
+            }
+        }
+    }
+}
+
+.copyright-area {
+    background-color: #dfe0e3;
+    text-align: center;
+    padding: 15px 0;
+    .copyright-text {
+        p {
+            margin-bottom: 0;
+        }
+    }
+}
