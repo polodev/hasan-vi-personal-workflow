@@ -11,7 +11,7 @@ body {
     font-family: $primary_font;
     font-size: 16px;
     line-height: 1.75;
-    color: $dark_color;
+    color: $body_color;
     font-weight: 400;
     height: 100%;
     vertical-align: baseline;
@@ -65,5 +65,6 @@ p {
 }
 
 a {
+    display: inline-block;
     text-decoration: none;
 }

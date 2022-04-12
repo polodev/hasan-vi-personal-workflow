@@ -1,0 +1,82 @@
+/*-------------------------
+  Header Styles
+-------------------------*/
+.header-top {
+    padding: 20px 0;
+    .header-brand {
+        img {
+            max-width: 150px;
+        }
+    }
+    .header-items {
+        ul {
+            @extend %liststyle;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            margin: 0 -10px;
+            li {
+                margin: 0 10px;
+            }
+            .header-search {
+                position: relative;
+                .btn-search {
+                    border: none;
+                    background-color: transparent;
+                    font-size: 16px;
+                    position: absolute;
+                    top: 12px;
+                    left: 15px;
+                }
+                .search-input {
+                    padding-left: 50px;
+                    width: 500px;
+                }
+            }
+            .login-btn {
+                border: 1px solid #d4d4d4;
+                padding: 10px 25px;
+                color: $dark_color;
+                border-radius: 4px;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+
+// MainMenu Nav Style 
+.header-mainmenu {
+    background-color: aliceblue;
+}
+
+.mainmenu-nav {
+    >ul {
+        @extend %liststyle;
+        display: flex;
+        align-items: center;
+        >li {
+            position: relative;
+            margin: 0 20px;
+            a {
+                color: $dark_color;
+            }
+        }
+    }
+    .submenu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #ffffff;
+        z-index: -1;
+        opacity: 0;
+        visibility: hidden;
+        min-width: 250px;
+        padding: 15px 10px;
+        border-radius: 4px;
+        box-shadow: var(--shadow-primary);
+        transition: all 0.3s ease-in-out;
+        list-style: none;
+        pointer-events: none;
+    }
+}

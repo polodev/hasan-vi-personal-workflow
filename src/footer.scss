@@ -5,32 +5,65 @@
 .footer-area {
     background-color: #ebecef;
     .footer-top {
-        padding: 100px 0;
+        padding: 50px 0 0;
     }
 }
 
 .footer-widget {
-    .quick-link {
+    margin-bottom: 50px;
+    ul {
         list-style: none;
         padding: 0;
         li {
+            margin-top: 12px;
+            margin-bottom: 12px;
             a {
-                color: $dark_color;
+                color: $body_color;
+                font-weight: 500;
+                transition: 0.3s;
+                position: relative;
                 &:hover {
-                    color: $primary_color;
+                    color: $dark_color;
                 }
+            }
+        }
+    }
+    .support-list-item {
+        margin-top: 25px;
+        li {
+            a {
+                font-weight: 400;
+                i {
+                    padding-right: 8px;
+                }
+            }
+        }
+    }
+    .download-btn-group {
+        margin-top: 20px;
+        .app-link {
+            display: flex;
+            align-items: center;
+        }
+        a {
+            margin-right: 10px;
+            &:last-child {
+                margin-right: 0;
             }
         }
     }
 }
 
+
+
 .copyright-area {
     background-color: #dfe0e3;
     text-align: center;
-    padding: 15px 0;
+    padding: 16px 0;
     .copyright-text {
         p {
             margin-bottom: 0;
+            font-size: 15px;
         }
     }
 }

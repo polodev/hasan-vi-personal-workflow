@@ -13,7 +13,7 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   line-height: 1.75;
-  color: #141414;
+  color: #444444;
   font-weight: 400;
   height: 100%;
   vertical-align: baseline;
@@ -70,6 +70,7 @@ p {
 }
 
 a {
+  display: inline-block;
   text-decoration: none;
 }
 
@@ -82,6 +83,100 @@ a {
   padding-right: 15px;
 }
 
+.mainmenu-nav > ul, .header-top .header-items ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+input {
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid #d4d4d4;
+  border-radius: 4px;
+  font-size: 14px;
+  padding: 0 25px;
+  color: #141414;
+  height: 50px;
+}
+input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/*-------------------------
+  Header Styles
+-------------------------*/
+.header-top {
+  padding: 20px 0;
+}
+.header-top .header-brand img {
+  max-width: 150px;
+}
+.header-top .header-items ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 0 -10px;
+}
+.header-top .header-items ul li {
+  margin: 0 10px;
+}
+.header-top .header-items ul .header-search {
+  position: relative;
+}
+.header-top .header-items ul .header-search .btn-search {
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  position: absolute;
+  top: 12px;
+  left: 15px;
+}
+.header-top .header-items ul .header-search .search-input {
+  padding-left: 50px;
+  width: 500px;
+}
+.header-top .header-items ul .login-btn {
+  border: 1px solid #d4d4d4;
+  padding: 10px 25px;
+  color: #141414;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.header-mainmenu {
+  background-color: aliceblue;
+}
+
+.mainmenu-nav > ul {
+  display: flex;
+  align-items: center;
+}
+.mainmenu-nav > ul > li {
+  position: relative;
+  margin: 0 20px;
+}
+.mainmenu-nav > ul > li a {
+  color: #141414;
+}
+.mainmenu-nav .submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  z-index: -1;
+  opacity: 0;
+  visibility: hidden;
+  min-width: 250px;
+  padding: 15px 10px;
+  border-radius: 4px;
+  box-shadow: var(--shadow-primary);
+  transition: all 0.3s ease-in-out;
+  list-style: none;
+  pointer-events: none;
+}
+
 /*-------------------------
   Footer Style
 -------------------------*/
@@ -89,27 +184,60 @@ a {
   background-color: #ebecef;
 }
 .footer-area .footer-top {
-  padding: 100px 0;
+  padding: 50px 0 0;
 }
 
-.footer-widget .quick-link {
+.footer-widget {
+  margin-bottom: 50px;
+}
+.footer-widget ul {
   list-style: none;
   padding: 0;
 }
-.footer-widget .quick-link li a {
+.footer-widget ul li {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+.footer-widget ul li a {
+  color: #444444;
+  font-weight: 500;
+  transition: 0.3s;
+  position: relative;
+}
+.footer-widget ul li a:hover {
   color: #141414;
 }
-.footer-widget .quick-link li a:hover {
-  color: #c71f66;
+.footer-widget .support-list-item {
+  margin-top: 25px;
+}
+.footer-widget .support-list-item li a {
+  font-weight: 400;
+}
+.footer-widget .support-list-item li a i {
+  padding-right: 8px;
+}
+.footer-widget .download-btn-group {
+  margin-top: 20px;
+}
+.footer-widget .download-btn-group .app-link {
+  display: flex;
+  align-items: center;
+}
+.footer-widget .download-btn-group a {
+  margin-right: 10px;
+}
+.footer-widget .download-btn-group a:last-child {
+  margin-right: 0;
 }
 
 .copyright-area {
   background-color: #dfe0e3;
   text-align: center;
-  padding: 15px 0;
+  padding: 16px 0;
 }
 .copyright-area .copyright-text p {
   margin-bottom: 0;
+  font-size: 15px;
 }
 
 /*# sourceMappingURL=style.css.map*/
