@@ -1,0 +1,93 @@
+/*-------------------------
+  Default Styles
+-------------------------*/
+
+.service-area-wrap {
+    padding: 100px 0 70px;
+}
+
+.service-grid {
+    box-shadow: 0 55px 86px -35px #ECF2F6;
+    border-radius: 6px;
+    background-color: #e8f4ff;
+    margin-bottom: 20px;
+    .thumbnail {
+        overflow: hidden;
+        border-radius: 6px 6px 0 0;
+        position: relative;
+        img {
+            border-radius: 6px 6px 0 0;
+            height: 210px;
+            object-fit: cover;
+            width: 100%;
+            transition: .3s;
+            transform: scale(1);
+            transition: transform 2s cubic-bezier(0.2, 0.96, 0.34, 1);
+        }
+    }
+    .content {
+        .title {
+            margin-bottom: 0;
+            font-weight: 500;
+            a {
+                display: block;
+                padding: 25px 30px;
+                color: $dark_color;
+                transition: .3s;
+                &:hover {
+                    color: $secondary_color;
+                }
+            }
+        }
+    }
+    &:hover {
+        .thumbnail {
+            img {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+
+.isotope-button {
+    margin-bottom: 60px;
+    text-align: center;
+    button {
+        border: none;
+        background-color: transparent;
+        font-size: 18px;
+        font-weight: 500;
+        color: $body_color;
+        margin-right: 100px;
+        padding: 2px 0;
+        position: relative;
+        &:focus-visible {
+            outline: none;
+        }
+        &:after {
+            content: "";
+            height: 2px;
+            width: 0;
+            background-color: $secondary_color;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            visibility: hidden;
+            opacity: 0;
+            transition: .3s;
+        }
+        &.active,
+        &:hover {
+            color: $dark_color;
+            &:after {
+                visibility: visible;
+                opacity: 1;
+                width: 100%;
+            }
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}

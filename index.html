@@ -47,7 +47,7 @@
 			<div class="container">
 				<nav class="mainmenu-nav">
 					<ul class="mainmenu">
-						<li class="has-children">
+						<li class="has-submenu">
 							<a href="#">Menu One</a>
 							<ul class="submenu">
 								<li><a href="#">Submenu One</a></li>
@@ -55,13 +55,24 @@
 								<li><a href="#">Submenu One</a></li>
 							</ul>
 						</li>
-						<li class="has-children">
+						<li class="has-submenu">
 							<a href="#">Menu Two</a>
 							<ul class="submenu">
 								<li><a href="#">Submenu One</a></li>
 								<li><a href="#">Submenu One</a></li>
 								<li><a href="#">Submenu One</a></li>
+								<li><a href="#">Submenu One</a></li>
+								<li><a href="#">Submenu One</a></li>
 							</ul>
+						</li>
+						<li>
+							<a href="#">Menu Two</a>
+						</li>
+						<li>
+							<a href="#">Menu Two</a>
+						</li>
+						<li>
+							<a href="#">Menu Two</a>
 						</li>
 					</ul>
 				</nav>
@@ -70,7 +81,109 @@
 	</header>
 	<!-- Header Area End -->
 
+	<!-- Breadcrumb Area End -->
+	<div class="breadcrum-area">
+		<div class="container">
+			<nav>
+				<ol class="breadcrumb">
+				  <li class="breadcrumb-item"><a href="#">Home</a></li>
+				  <li class="breadcrumb-item active" aria-current="page">All Services</li>
+				</ol>
+			</nav>
+		</div>
+	</div>
+	<!-- Breadcrumb Area End -->
 
+	<!-- Service Area End -->
+	<section class="service-area-wrap">
+		<div class="container">
+			<div class="isotope-wrapper">
+				<div class="isotope-button">
+					<button data-filter="*" class="active"><span class="filter-text">All Services</span></button>
+					<button data-filter=".health"><span class="filter-text">Health</span></button>
+					<button data-filter=".accident"><span class="filter-text">Accident</span></button>
+					<button data-filter=".life"><span class="filter-text">Life</span></button>
+				</div>
+				<div class="row g-5 isotope-list">
+					<div class="col-lg-4 col-md-6 services accident">
+						<div class="service-grid">
+							<div class="thumbnail">
+								<a href="single-service.html">
+									<img src="images/service-1.png" alt="Services">
+								</a>
+							</div>
+							<div class="content">
+								<h4 class="title"><a href="single-service.html">Accident Insurance</a></h4>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 services health">
+						<div class="service-grid">
+							<div class="thumbnail">
+								<a href="single-service.html">
+									<img src="images/service-1.png" alt="Services">
+								</a>
+							</div>
+							<div class="content">
+								<h4 class="title"><a href="single-service.html">Health Insurance</a></h4>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 services health life">
+						<div class="service-grid">
+							<div class="thumbnail">
+								<a href="single-service.html">
+									<img src="images/service-1.png" alt="Services">
+								</a>
+							</div>
+							<div class="content">
+								<h4 class="title"><a href="single-service.html">Life Insurance</a></h4>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 services accident">
+						<div class="service-grid">
+							<div class="thumbnail">
+								<a href="single-service.html">
+									<img src="images/service-1.png" alt="Services">
+								</a>
+							</div>
+							<div class="content">
+								<h4 class="title"><a href="single-service.html">Accident Insurance</a></h4>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 services health life">
+						<div class="service-grid">
+							<div class="thumbnail">
+								<a href="single-service.html">
+									<img src="images/service-1.png" alt="Services">
+								</a>
+							</div>
+							<div class="content">
+								<h4 class="title"><a href="single-service.html">Health Insurance</a></h4>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 services health">
+						<div class="service-grid">
+							<div class="thumbnail">
+								<a href="single-service.html">
+									<img src="images/service-1.png" alt="Services">
+								</a>
+							</div>
+							<div class="content">
+								<h4 class="title"><a href="single-service.html">Life Insurance</a></h4>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Service Area End -->
+
+	<!-- Footer Area Start -->
 	<footer class="footer-area">
 		<div class="footer-top">
 			<div class="container">
@@ -143,13 +256,17 @@
 		<div class="copyright-area">
 			<div class="container">
 				<div class="copyright-text">
-					<p>Copyright © 2022 All rights reserved by Company.</p>
+					<p>Copyright © 2022 All rights reserved by Bimafy.</p>
 				</div>
 			</div>
 		</div>
 	</footer>
+	<!-- Footer Area End -->
 
     <script src="vendor/jquery.min.js"></script>
     <script src="vendor/bootstrap5/js/bootstrap.bundle.min.js"></script>
+	<script src="vendor/isotope/isotope.pkgd.min.js"></script>
+    <script src="vendor/isotope/imagesloaded.pkgd.min.js"></script>
+    <script src="vendor/main.js"></script>
   </body>
 </html>
