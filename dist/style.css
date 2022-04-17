@@ -13,7 +13,7 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   line-height: 1.75;
-  color: #444444;
+  color: #343839;
   font-weight: 400;
   height: 100%;
   vertical-align: baseline;
@@ -139,7 +139,7 @@ input:focus {
   left: 15px;
 }
 .header-top .header-items ul .header-search .btn-search:hover {
-  color: #c71f66;
+  color: #5dc2ca;
 }
 .header-top .header-items ul .header-search .search-input {
   padding-left: 50px;
@@ -154,8 +154,8 @@ input:focus {
   transition: 0.3s;
 }
 .header-top .header-items ul .login-btn:hover {
-  background-color: #c71f66;
-  border-color: #c71f66;
+  background-color: #5dc2ca;
+  border-color: #5dc2ca;
   color: #ffffff;
 }
 
@@ -184,7 +184,7 @@ input:focus {
   transition: 0.3s;
 }
 .mainmenu-nav > ul > li > a:hover {
-  color: #c71f66;
+  color: #5dc2ca;
 }
 .mainmenu-nav > ul li {
   position: relative;
@@ -209,13 +209,13 @@ input:focus {
   top: 90%;
   left: 0;
   background-color: #ffffff;
-  z-index: 1;
+  z-index: 4;
   opacity: 0;
   visibility: hidden;
   min-width: 200px;
   padding: 15px 10px;
   box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.08);
-  border-bottom: 1px solid #c71f66;
+  border-bottom: 1px solid #5dc2ca;
   transition: 0.3s;
 }
 .mainmenu-nav > ul li.has-submenu .submenu li a {
@@ -239,7 +239,7 @@ input:focus {
   Footer Style
 -------------------------*/
 .footer-area {
-  background-color: #ebecef;
+  background-color: #f0f0f0;
 }
 .footer-area .footer-top {
   padding: 60px 0 10px;
@@ -257,13 +257,12 @@ input:focus {
   margin-bottom: 12px;
 }
 .footer-widget ul li a {
-  color: #444444;
-  font-weight: 500;
+  color: #343839;
   transition: 0.3s;
   position: relative;
 }
 .footer-widget ul li a:hover {
-  color: #141414;
+  color: #5dc2ca;
 }
 .footer-widget .support-list-item {
   margin-top: 25px;
@@ -289,7 +288,7 @@ input:focus {
 }
 
 .copyright-area {
-  background-color: #dfe0e3;
+  background-color: #ebecef;
   text-align: center;
   padding: 16px 0;
 }
@@ -317,7 +316,7 @@ input:focus {
   transition: 0.3s;
 }
 .breadcrumb .breadcrumb-item a:hover {
-  color: #c71f66;
+  color: #5dc2ca;
 }
 .breadcrumb .breadcrumb-item + .breadcrumb-item {
   padding-left: 10px;
@@ -330,6 +329,88 @@ input:focus {
   font-size: 14px;
   top: 3px;
   position: relative;
+}
+
+.breadcrum-banner-area {
+  background-image: url("../images/breadcrumb-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 30px 0 50px;
+  z-index: 1;
+}
+.breadcrum-banner-area:before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+.breadcrum-banner-area .banner-content .title {
+  color: #ffffff;
+  font-size: 40px;
+}
+.breadcrum-banner-area .banner-content .review-wrap .rating {
+  background-color: #5dc2ca;
+  display: inline-flex;
+  align-items: center;
+  color: #ffffff;
+  padding: 6px 15px;
+  border-radius: 4px;
+}
+.breadcrum-banner-area .banner-content .review-wrap .rating i {
+  margin-right: 8px;
+  position: relative;
+  top: -1px;
+}
+.breadcrum-banner-area .banner-content .review-wrap .rating .avrg-rating, .breadcrum-banner-area .banner-content .review-wrap .rating i {
+  font-size: 20px;
+}
+.breadcrum-banner-area .banner-content .review-wrap .rating .total-rating {
+  margin-left: 10px;
+  font-size: 15px;
+}
+.breadcrum-banner-area .banner-content .list-item {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 30px;
+}
+.breadcrum-banner-area .banner-content .list-item li {
+  color: #ffffff;
+  margin: 12px 0;
+  font-size: 18px;
+  position: relative;
+  padding-left: 35px;
+}
+.breadcrum-banner-area .banner-content .list-item li:before {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 600;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.breadcrum-banner-area .breadcrumb {
+  margin-bottom: 30px;
+}
+.breadcrum-banner-area .breadcrumb .breadcrumb-item {
+  color: #ffffff;
+}
+.breadcrum-banner-area .breadcrumb .breadcrumb-item a {
+  color: #d5d5d5;
+}
+.breadcrum-banner-area .breadcrumb .breadcrumb-item a:hover {
+  color: #ffffff;
+}
+.breadcrum-banner-area .breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+  color: #d5d5d5;
 }
 
 /*-------------------------
@@ -371,7 +452,7 @@ input:focus {
   transition: 0.3s;
 }
 .service-grid .content .title a:hover {
-  color: #04a2b7;
+  color: #eb6ea6;
 }
 .service-grid:hover .thumbnail img {
   transform: scale(1.1);
@@ -386,7 +467,7 @@ input:focus {
   background-color: transparent;
   font-size: 18px;
   font-weight: 500;
-  color: #444444;
+  color: #343839;
   margin-right: 100px;
   padding: 2px 0;
   position: relative;
@@ -398,7 +479,7 @@ input:focus {
   content: "";
   height: 2px;
   width: 0;
-  background-color: #04a2b7;
+  background-color: #eb6ea6;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -416,6 +497,10 @@ input:focus {
 }
 .isotope-button button:last-child {
   margin-right: 0;
+}
+
+.service-details-area {
+  padding: 120px 0;
 }
 
 /*# sourceMappingURL=style.css.map*/
