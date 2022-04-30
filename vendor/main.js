@@ -1,6 +1,20 @@
 (function ($) {
     "use strict";
-    
+
+    /*-------------------------------------
+    Isotope
+    -------------------------------------*/
+    $('#service-navigation').onePageNav({
+        currentClass: 'current',
+        changeHash: false,
+        scrollSpeed: 500,
+        scrollThreshold: .5,
+        filter: '',
+        easing: 'swing',
+        
+    });
+
+
     /*-------------------------------------
     Isotope
     -------------------------------------*/

@@ -1,23 +1,25 @@
 /*-------------------------
-  Default Styles
+  Services Styles
 -------------------------*/
 
-.service-area-wrap {
-    padding: 100px 0 70px;
+.service-area {
+    padding: 100px 0;
+    .main-heading-title {
+        font-weight: 500;
+        margin-bottom: 30px;
+    }
 }
 
 .service-grid {
     box-shadow: 0 55px 86px -35px #ECF2F6;
-    border-radius: 6px;
+    border-radius: 4px;
     background-color: #e8f4ff;
-    margin-bottom: 20px;
     .thumbnail {
         overflow: hidden;
-        border-radius: 6px 6px 0 0;
+        border-radius: 4px;
         position: relative;
         img {
-            border-radius: 6px 6px 0 0;
-            height: 210px;
+            border-radius: 4px;
             object-fit: cover;
             width: 100%;
             transition: .3s;
@@ -28,10 +30,9 @@
     .content {
         .title {
             margin-bottom: 0;
-            font-weight: 500;
             a {
                 display: block;
-                padding: 25px 30px;
+                padding: 20px;
                 color: $dark_color;
                 transition: .3s;
                 &:hover {
@@ -43,12 +44,58 @@
     &:hover {
         .thumbnail {
             img {
-                transform: scale(1.1);
+                transform: scale(1.05);
             }
         }
     }
 }
 
+.service-container-wrap {
+    display: grid;
+    grid-template-columns: 230px auto;
+    gap: 40px;
+}
+
+.service-nav {
+    border-right: 2px solid $border-color;
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        position: sticky;
+        top: 10px;
+        li {
+            font-size: 15px;
+            font-weight: 500;
+            a {
+                color: $dark_color;
+                padding: 8px 15px;
+                border-radius: 4px;
+                display: block;
+                transition: .3s;
+                &.current,
+                &:hover {
+                    background-color: #ebecef;
+                }
+            }
+            &.current
+            a {
+                background-color: #ebecef;
+            }
+        }
+    }
+}
+
+.service-section {
+    padding-bottom: 80px;
+    .section-title {
+        font-weight: 600;
+        margin-bottom: 30px;
+    }
+}
+
+
+// unused code
 
 .isotope-button {
     margin-bottom: 60px;

@@ -7,6 +7,7 @@
 -------------------------*/
 html {
   font-size: 10px;
+  scroll-behavior: auto !important;
 }
 
 body {
@@ -337,7 +338,7 @@ input:focus {
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
-  padding: 30px 0 50px;
+  padding: 30px 0;
   z-index: 1;
 }
 .breadcrum-banner-area:before {
@@ -414,26 +415,28 @@ input:focus {
 }
 
 /*-------------------------
-  Default Styles
+  Services Styles
 -------------------------*/
-.service-area-wrap {
-  padding: 100px 0 70px;
+.service-area {
+  padding: 100px 0;
+}
+.service-area .main-heading-title {
+  font-weight: 500;
+  margin-bottom: 30px;
 }
 
 .service-grid {
   box-shadow: 0 55px 86px -35px #ECF2F6;
-  border-radius: 6px;
+  border-radius: 4px;
   background-color: #e8f4ff;
-  margin-bottom: 20px;
 }
 .service-grid .thumbnail {
   overflow: hidden;
-  border-radius: 6px 6px 0 0;
+  border-radius: 4px;
   position: relative;
 }
 .service-grid .thumbnail img {
-  border-radius: 6px 6px 0 0;
-  height: 210px;
+  border-radius: 4px;
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
@@ -443,11 +446,10 @@ input:focus {
 }
 .service-grid .content .title {
   margin-bottom: 0;
-  font-weight: 500;
 }
 .service-grid .content .title a {
   display: block;
-  padding: 25px 30px;
+  padding: 20px;
   color: #141414;
   transition: 0.3s;
 }
@@ -455,7 +457,50 @@ input:focus {
   color: #eb6ea6;
 }
 .service-grid:hover .thumbnail img {
-  transform: scale(1.1);
+  transform: scale(1.05);
+}
+
+.service-container-wrap {
+  display: grid;
+  grid-template-columns: 230px auto;
+  gap: 40px;
+}
+
+.service-nav {
+  border-right: 2px solid #ebecef;
+}
+.service-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 10px;
+}
+.service-nav ul li {
+  font-size: 15px;
+  font-weight: 500;
+}
+.service-nav ul li a {
+  color: #141414;
+  padding: 8px 15px;
+  border-radius: 4px;
+  display: block;
+  transition: 0.3s;
+}
+.service-nav ul li a.current, .service-nav ul li a:hover {
+  background-color: #ebecef;
+}
+.service-nav ul li.current a {
+  background-color: #ebecef;
+}
+
+.service-section {
+  padding-bottom: 80px;
+}
+.service-section .section-title {
+  font-weight: 600;
+  margin-bottom: 30px;
 }
 
 .isotope-button {
@@ -499,8 +544,42 @@ input:focus {
   margin-right: 0;
 }
 
+/*-------------------------
+  Service Details Styles
+-------------------------*/
 .service-details-area {
   padding: 120px 0;
+}
+
+.service-sidebar {
+  position: fixed;
+  top: 30%;
+  right: 50px;
+  z-index: 5;
+  min-width: 400px;
+}
+.service-sidebar .inner {
+  width: 100%;
+  background-color: #5dc2ca;
+  border-radius: 4px;
+  padding: 30px;
+}
+.service-sidebar .sidebar-service-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.service-sidebar .sidebar-service-list ul .service-btn {
+  background-color: transparent;
+  border: none;
+  background-color: #ffffff;
+  width: 100%;
+  text-align: left;
+  padding: 5px 20px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 /*# sourceMappingURL=style.css.map*/
