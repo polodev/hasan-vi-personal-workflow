@@ -130,6 +130,11 @@ input:focus {
 .header-top .header-items ul .header-search {
   position: relative;
 }
+@media only screen and (max-width: 767px) {
+  .header-top .header-items ul .header-search {
+    display: none;
+  }
+}
 .header-top .header-items ul .header-search .btn-search {
   border: none;
   background-color: transparent;
@@ -146,6 +151,11 @@ input:focus {
   padding-left: 50px;
   width: 500px;
 }
+@media only screen and (max-width: 991px) {
+  .header-top .header-items ul .header-search .search-input {
+    width: 100%;
+  }
+}
 .header-top .header-items ul .login-btn {
   border: 1px solid #d4d4d4;
   padding: 10px 25px;
@@ -155,6 +165,25 @@ input:focus {
   transition: 0.3s;
 }
 .header-top .header-items ul .login-btn:hover {
+  background-color: #5dc2ca;
+  border-color: #5dc2ca;
+  color: #ffffff;
+}
+.header-top .header-items ul .mobile-menu-toggle {
+  border: 1px solid #d4d4d4;
+  padding: 4px 15px;
+  color: #141414;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: 0.3s;
+  font-size: 20px;
+}
+@media only screen and (min-width: 992px) {
+  .header-top .header-items ul .mobile-menu-toggle {
+    display: none;
+  }
+}
+.header-top .header-items ul .mobile-menu-toggle:hover {
   background-color: #5dc2ca;
   border-color: #5dc2ca;
   color: #ffffff;
@@ -236,6 +265,44 @@ input:focus {
   top: 100%;
 }
 
+@media only screen and (max-width: 991px) {
+  .mainmenu-nav {
+    width: 200px;
+    padding: 30px;
+    overflow-y: auto;
+  }
+  .mainmenu-nav > ul {
+    display: block;
+    margin: 0;
+  }
+  .mainmenu-nav > ul > li > a {
+    height: auto;
+    line-height: 1;
+    padding: 15px 0;
+  }
+  .mainmenu-nav > ul li.has-submenu > a::after {
+    right: 44px;
+    top: 18px;
+  }
+  .mainmenu-nav > ul li.has-submenu .submenu {
+    display: none;
+    position: initial;
+    opacity: 1;
+    visibility: visible;
+    min-width: 100%;
+    box-shadow: none;
+    border-bottom: none;
+    transition: none;
+    padding: 0 5px;
+  }
+  .mainmenu-nav > ul li.has-submenu .submenu li a {
+    padding: 5px 0;
+  }
+  .mainmenu-nav > ul li.has-submenu .submenu li a:hover {
+    background-color: transparent;
+    color: #5dc2ca;
+  }
+}
 /*-------------------------
   Footer Style
 -------------------------*/

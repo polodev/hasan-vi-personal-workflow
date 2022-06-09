@@ -20,6 +20,9 @@
             }
             .header-search {
                 position: relative;
+                @media only screen and (max-width: 767px) {
+                    display: none;
+                }
                 .btn-search {
                     border: none;
                     background-color: transparent;
@@ -35,6 +38,9 @@
                 .search-input {
                     padding-left: 50px;
                     width: 500px;
+                    @media only screen and (max-width: 991px) {
+                        width: 100%;
+                    }
                 }
             }
             .login-btn {
@@ -50,6 +56,25 @@
                     color: $white_color;
                 }
             }
+
+            .mobile-menu-toggle {
+                border: 1px solid #d4d4d4;
+                padding: 4px 15px;
+                color: $dark_color;
+                border-radius: 4px;
+                font-weight: 500;
+                transition: .3s;
+                font-size: 20px;
+                @media only screen and (min-width: 992px) {
+                    display: none;
+                }
+                &:hover {
+                    background-color: $primary_color;
+                    border-color: $primary_color;
+                    color: $white_color;
+                }
+            }
+
         }
     }
 }
@@ -134,6 +159,55 @@
                         opacity: 1;
                         visibility: visible;
                         top: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .mainmenu-nav {
+        width: 200px;
+        padding: 30px;
+        overflow-y: auto;
+        >ul {
+            display: block;
+            margin: 0;
+            >li {
+                >a {
+                    height: auto;
+                    line-height: 1;
+                    padding: 15px 0;
+                }
+            }
+            li {
+                &.has-submenu {
+                    & > a {
+                        &::after {
+                            right: 44px;
+                            top: 18px;
+                        }
+                    }
+                    .submenu {
+                        display: none;
+                        position: initial;
+                        opacity: 1;
+                        visibility: visible;
+                        min-width: 100%;
+                        box-shadow: none;
+                        border-bottom: none;
+                        transition: none;
+                        padding: 0 5px;
+                        li {
+                            a {
+                                padding: 5px 0;
+                                &:hover {
+                                    background-color: transparent;
+                                    color: $primary_color;
+                                }
+                            }
+                        }
                     }
                 }
             }

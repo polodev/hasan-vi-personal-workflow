@@ -18,32 +18,34 @@
     /*-------------------------------------
     Isotope
     -------------------------------------*/
-    $('.isotope-wrapper').imagesLoaded(function () {
-        // filter items on button click
-        $('.isotope-button').on('click', 'button', function () {
-            var filterValue = $(this).attr('data-filter');
-            $grid.isotope({
-                filter: filterValue
-            });
-        });
         
-        // init Isotope
-        var $grid = $('.isotope-list').isotope({
-            itemSelector: '.services',
-            percentPosition: true,
-            transitionDuration: '0.7s',
-            layoutMode: 'fitRows',
-            masonry: {
-                // use outer width of grid-sizer for columnWidth
-                columnWidth: 1,
-            }
-        });
+    $(".has-submenu > a").on('click', function(e) {
+
+        var targetParent = $(this).parents(".mainmenu-nav");
+        var target = $(this).siblings(".submenu");
+
+        if (targetParent.hasClass('offcanvas')) {
+            $(target).slideToggle(400);
+            $(this).parent(".has-submenu").toggleClass('open');
+        }
+
     });
 
-    $('.isotope-button button').on('click', function (event) {
-        $(this).siblings('.active').removeClass('active');
-        $(this).addClass('active');
-        event.preventDefault();
+    // Mobile Sidemenu Class Add
+    function resizeClassAdd() {
+        if (window.matchMedia('(max-width: 991px)').matches) {
+            $('.mainmenu-nav').addClass('offcanvas offcanvas-start');
+        } else {
+            $('.mainmenu-nav').removeClass('offcanvas offcanvas-start');
+            $('.mainmenu-nav').removeAttr('style');
+        }
+    }
+
+    $(window).resize(function() {
+        resizeClassAdd();
     });
+
+    resizeClassAdd();
+    
    
 })(jQuery);
